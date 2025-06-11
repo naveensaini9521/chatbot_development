@@ -23,8 +23,6 @@ A full-stack chatbot for product search and conversation simulation built for Up
 - **Frontend:** React.js, TailwindCSS
 - **Backend:** Flask, Flask-JWT-Extended
 - **Database:** SQLite + SQLAlchemy
-- **Tools:** Faker, Postman, Docker (optional)
-
 ---
 
 ## Setup Instructions
@@ -46,41 +44,8 @@ python app.py
 
 Ensure all backend endpoints are functioning correctly and return expected responses using Postman.
 
-### Auth Testing
 
-- **POST** `/api/auth/register`
-  - Request Body:
-    ```json
-    {
-      "username": "testuser",
-      "email": "test@example.com",
-      "password": "test123"
-    }
-    ```
-- **POST** `/api/auth/login`
-  - Response: `access_token` to be used in Authorization header
 
-### Products Testing
-
-- **GET** `/api/products?category=Electronics&min_price=50&max_price=500`
-  - Headers:
-    ```
-    Authorization: Bearer <access_token>
-    ```
-
-### Chat Testing
-
-- **POST** `/api/chat`
-  - Headers:
-    ```
-    Authorization: Bearer <access_token>
-    ```
-  - Request Body:
-    ```json
-    {
-      "message": "Show me the cheapest product"
-    }
-    ```
 
 ### Expected Behavior
 
